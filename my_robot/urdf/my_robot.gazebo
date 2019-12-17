@@ -61,7 +61,7 @@
   -->
 
   <!-- RGBD Camera -->
-  <gazebo reference="camera_link">
+  <gazebo reference="camera_RGBD">
     <sensor type="depth" name="camera1">
         <always_on>1</always_on>
         <update_rate>20.0</update_rate>
@@ -84,8 +84,8 @@
          <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
             <alwaysOn>true</alwaysOn>
             <updateRate>10.0</updateRate>
-            <cameraName>camera</cameraName>
-            <frameName>camera_link_optical</frameName>                   
+            <cameraName>camera_RGBD</cameraName>
+            <frameName>camera_RGBD</frameName>                   
             <imageTopicName>rgb/image_raw</imageTopicName>
             <depthImageTopicName>depth/image_raw</depthImageTopicName>
             <pointCloudTopicName>depth/points</pointCloudTopicName>

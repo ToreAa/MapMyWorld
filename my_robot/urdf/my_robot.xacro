@@ -180,14 +180,16 @@
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
-  <joint name="camera_optical_joint" type="fixed">
+  <link name="camera_RGBD">
+  </link>
+
+  <joint name="camera_joint_RGBD" type="fixed">
     <origin xyz="0.2 0 0" rpy="0 0 0"/>
     <parent link="chassis"/>
-    <child link="camera_link_optical"/>
+    <child link="camera_RGBD"/>
   </joint>
 
-  <link name="camera_link_optical">
-  </link>
+
 
   <link name='hokuyo'>
     <pose>0 0 0 0 0 0</pose>
